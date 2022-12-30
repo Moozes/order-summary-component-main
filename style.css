@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url(./images/pattern-background-desktop.svg) top left no-repeat;
+  background-size: contain;
+  background-color: hsl(225deg, 100%, 94%);
+  color: hsl(224deg, 23%, 55%);
+  padding: 40px 0;
+}
+@media (max-width: 23.4375rem) {
+  body {
+    background: url(./images/pattern-background-mobile.svg) top left no-repeat;
+    background-color: hsl(225deg, 100%, 94%);
+    background-size: contain;
+  }
+}
+
+@media (max-width: 23.4375rem) {
+  main {
+    padding: 10px;
+  }
+}
+
+.card {
+  max-width: 27rem;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card img.hero {
+  width: 100%;
+}
+.card .card-body {
+  padding: 40px;
+}
+.card .card-body > * {
+  margin-bottom: 20px;
+}
+.card .card-body h1.card-title {
+  text-align: center;
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+  font-size: 1.75rem;
+}
+.card .card-body p.card-description {
+  text-align: center;
+}
+.card .card-body .card-footer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: hsl(225deg, 100%, 98%);
+  border-radius: 10px;
+}
+.card .card-body .card-footer img.icon {
+  margin-right: 20px;
+}
+.card .card-body .card-footer .price {
+  flex: 1 1 auto;
+}
+.card .card-body .card-footer .price h2 {
+  color: hsl(223deg, 47%, 23%);
+  font-size: 1rem;
+  font-weight: 900;
+}
+.card .card-body .card-footer .change-button {
+  color: hsl(245deg, 75%, 52%);
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+.card .card-body .card-footer .change-button:hover {
+  text-decoration: none;
+}
+.card .card-body .ok-button {
+  background: hsl(245deg, 75%, 52%);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  box-shadow: 0 20px 20px 1px hsl(225deg, 100%, 94%);
+  cursor: pointer;
+}
+.card .card-body .ok-button:hover {
+  opacity: 0.8;
+}
+.card .card-body .cancel-button {
+  color: hsl(224deg, 23%, 55%);
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+.card .card-body .cancel-button:hover {
+  color: hsl(223deg, 47%, 23%);
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+}
+footer a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=style.css.map */

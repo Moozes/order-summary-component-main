@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+// breakpoints
+$mobile: calc(375rem / 16);
+$desktop: calc(1440rem / 16);
+// primary colors
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);// btn bg
+// neutral colors
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);// text
+$dark-blue: hsl(223, 47%, 23%);// text
+
+body {
+    font-family: 'Red Hat Display', sans-serif; //500, 700, 900
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // gap: 12px;
+    min-height: 100vh;
+    background: url(./images/pattern-background-desktop.svg) top left no-repeat;
+    background-size: contain;
+    background-color: $pale-blue;
+    color: $desaturated-blue;
+    padding: 40px 0;
+    
+    @media (max-width: $mobile) {
+        background: url(./images/pattern-background-mobile.svg) top left no-repeat;
+        background-color: $pale-blue;
+        background-size: contain;
+    }
+
+}
+
+main {
+    @media (max-width: $mobile) {
+        padding: 10px;        
+    }
+}
+
+.card {
+    max-width: $desktop * 0.3;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+
+    img.hero {
+        width: 100%;
+    }
+
+    
+    .card-body {
+        padding: 40px;
+        & > * {
+            margin-bottom: 20px;
+        }
+
+        h1.card-title {
+            text-align: center;
+            color: $dark-blue;
+            font-weight: 900;
+            font-size: calc(28rem / 16);
+        }
+
+        p.card-description {
+            text-align: center;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: $very-pale-blue;
+            border-radius: 10px;
+
+            img.icon {
+                margin-right: 20px;
+            }
+
+            .price {
+                flex: 1 1 auto;
+                h2 {
+                    color: $dark-blue;
+                    font-size: calc(16rem / 16);
+                    font-weight: 900;
+                }
+                div {}
+            }
+
+            .change-button {
+                color: $bright-blue;
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 700;
+                font-size: calc(14rem / 16);
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .ok-button {
+            background: $bright-blue;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: calc(14rem / 16);
+            box-shadow: 0 20px 20px 1px $pale-blue;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        
+        .cancel-button {
+            color: $desaturated-blue;
+            text-align: center;
+            padding: 15px 0;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: calc(14rem / 16);
+            margin-bottom: 0;
+            cursor: pointer;
+
+            &:hover {
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+footer {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
